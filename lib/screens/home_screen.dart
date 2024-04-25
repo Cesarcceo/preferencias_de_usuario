@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:preferencias_de_usuario/share_preferences/preferences.dart';
 import 'package:preferencias_de_usuario/widgets/widgets.dart';
 
 
@@ -13,15 +14,15 @@ class HomeScreen extends StatelessWidget {
         title: const Text('Home'),
       ),
       drawer: const SideMenu(),
-      body: const Column(
+      body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('Tema Oscuro: '),
-          Divider(),
-          Text('Genero '),
-          Divider(),
-          Text('Nombre de Usuario: '),
-          Divider(),
+          Text('Tema Oscuro: ${Preferences.isDarkmode}'),
+          const Divider(),
+          Text('Genero ${Preferences.gener}'),
+          const Divider(),
+          Text('Nombre de Usuario: ${Preferences.name}'),
+          const Divider(),
         ],
       )
    );
