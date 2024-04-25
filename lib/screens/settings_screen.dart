@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:preferencias_de_usuario/widgets/widgets.dart';
 
 
 class SettingsScreen extends StatelessWidget {
@@ -11,6 +12,7 @@ class SettingsScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Settings'),
       ),
+      drawer: const SideMenu(),
       body: Center(
         child: Text('Hola Mundo'),
      ),
