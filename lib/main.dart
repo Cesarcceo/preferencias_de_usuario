@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:preferencias_de_usuario/screens/screens.dart';
 
-void main() => runApp(MyApp());
+import 'package:preferencias_de_usuario/screens/screens.dart';
+import 'package:preferencias_de_usuario/share_preferences/preferences.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Preferences.init();
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
